@@ -1,0 +1,18 @@
+package homework;
+
+import java.util.Scanner;
+
+public class monge6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("화씨온도(F)를 입력하세요 : ");
+        double fahrenheit = sc.nextDouble();
+        
+        double celsius = (5.0 / 9.0) * (fahrenheit - 32);
+        
+        System.out.println("섭씨온도(C) : " + celsius);
+        
+        sc.close();
+    }
+}
