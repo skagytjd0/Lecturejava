@@ -16,8 +16,8 @@ public class TestMember {
         MemberDao mdao = new MemberListDao();
         // 회원 추가
         System.out.println(">>> 회원 추가");
-        mdao.save(new Member("hyejeong", "1111", "이혜정", null, null));
-        mdao.save(new Member("curi", "1111", "큐리", null, null));
+        mdao.save(new Member("hyejeong", "1111", "이혜정", null, null, Member.USER));
+        mdao.save(new Member("curi", "1111", "큐리", null, null, Member.USER));
         printMemberList(mdao.findAll());
         //회원 모두 찾기
         System.out.println(">>> 회원 목록");
