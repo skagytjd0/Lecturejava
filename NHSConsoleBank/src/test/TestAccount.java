@@ -15,9 +15,9 @@ public class TestAccount {
         AccountDao adao = new AccountListDao();
 
         System.out.println(">>> 계좌 추가 및 목록");
-        adao.save(new Account(1111, "1111", "hyejeong", 10000));
-        adao.save(new Account(2222, "2222", "curi", 50000));
-        adao.save(new Account(3333, "1111", "hyejeong", 0));
+        adao.save(new Account(1111, "1111", "nhs", 10000));
+        adao.save(new Account(2222, "2222", "user1", 50000));
+        adao.save(new Account(3333, "1111", "nhs", 0));
         List<Account> alist = adao.findAll();
         printAccountList(alist);
 
@@ -26,7 +26,7 @@ public class TestAccount {
         System.out.println(acc);
 
         System.out.println(">>> 회원 ID로 계좌 찾기");
-        List<Account> memberAccounts = adao.findByMemberId("hyejeong");
+        List<Account> memberAccounts = adao.findByMemberId("nhs");
         printAccountList(memberAccounts);
 
         System.out.println(">>> 비번변경");
@@ -45,6 +45,7 @@ public class TestAccount {
     }
 
     public static void printAccountList(List<Account> alist) {
+        if (alist == null) return;
         for (Account a : alist) {
             System.out.println(a);
         }

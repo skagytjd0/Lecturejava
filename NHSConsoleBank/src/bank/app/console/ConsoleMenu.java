@@ -12,7 +12,7 @@ public abstract class ConsoleMenu {
 	protected AccountService as;
 	protected MemberService ms;
 	protected String[] menuList;
-	protected Scannerinput input = new Scannerinput();
+	protected ScannerInput input = new ScannerInput();
 	
 	protected ConsoleMenu(AccountService as, MemberService ms) {
 		this.as = as;
