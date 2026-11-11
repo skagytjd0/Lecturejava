@@ -37,7 +37,7 @@ public class AccountMapDao implements AccountDao {
 		if (!accountDB.isEmpty()) {
 			List<Account> alist = new ArrayList<>();
 			for (Account a : accountDB.values()) {
-				if (a.getMemberId() != null && a.getMemberId().equals(id)) {
+				if (a.getMemberId().equals(id)) {
 					alist.add(a);
 				}
 			}
