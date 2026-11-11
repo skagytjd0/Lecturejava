@@ -4,15 +4,19 @@ import java.util.List;
 
 import bank.account.Account;
 import bank.account.AccountDao;
+import bank.account.AccountMapDao;
+import bank.account.NHSAccountService;
 import bank.account.AccountListDao;
 
 public class TestAccount {
+
     public static void main(String[] args) {
-        testAccountDao();
+//  testAccountDao();
+        testAccountDao(new AccountMapDao());
     }
 
-    public static void testAccountDao() {
-        AccountDao adao = new AccountListDao();
+    public static void testAccountDao(AccountMapDao adao) {
+//      AccountDao adao = new AccountListDao();
 
         System.out.println(">>> 계좌 추가 및 목록");
         adao.save(new Account(1111, "1111", "nhs", 10000));
@@ -45,7 +49,9 @@ public class TestAccount {
     }
 
     public static void printAccountList(List<Account> alist) {
-        if (alist == null) return;
+        if (alist == null) {
+            return;
+        }
         for (Account a : alist) {
             System.out.println(a);
         }
