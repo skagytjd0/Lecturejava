@@ -17,6 +17,7 @@ final public class ScannerInput {
         try {
             return Integer.parseInt(inStr);
         } catch (NumberFormatException e) {
+            System.out.println("숫자를 입력하세요");
             return -1;
         }
     }
